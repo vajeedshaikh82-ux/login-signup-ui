@@ -1,9 +1,11 @@
-# TODO
+# TODO - Login Signup UI Full Stack App
 
-- [x] Read script.js, style.css, index.html
-- [x] Get GitHub repo URL from user
-- [x] Edit script.js: add showThankYouPage, replace showThankYou calls, remove old functions
-- [x] Edit style.css: append thankyou-page CSS at end
-- [ ] Initialize git and add remote
-- [ ] Commit and push to main branch
-
+- [x] Create plan and get approval
+- [x] Create package.json
+- [x] Create .env.example
+- [x] Create server.js (backend - Express, MongoDB, JWT, bcrypt)
+- [x] Create index.html (frontend - premium glassmorphism UI)
+- [x] Create style.css (royal black, white, gold theme, responsive)
+- [x] Create script.js (frontend logic, validation, API fetch)
+- [x] Create README.md
+- [x] All files verified and linked properly
