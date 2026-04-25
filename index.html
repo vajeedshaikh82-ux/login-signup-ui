@@ -118,49 +118,27 @@
 
       <p class="footer-text">Premium authentication by Wajeed Shaikh</p>
     </div>
+  </div>
 
-  <!-- Dashboard Container -->
-  <div id="dashboard-container" class="page">
-    <nav class="dashboard-nav">
-      <div class="nav-brand">
-        <div class="brand-icon small">&#9812;</div>
-        <span>Royal Access</span>
+  <!-- Thank You / Welcome Page Container -->
+  <div id="thankyou-container" class="page">
+    <div class="thankyou-wrapper">
+      <div class="thankyou-card glass-card">
+        <div class="thankyou-icon">&#10024;</div>
+        <h1 class="thankyou-title">Thank You for Logging In</h1>
+        <h2 class="thankyou-subtitle">Welcome to Royal Access</h2>
+        <p class="thankyou-message">
+          Your login was successful. This project demonstrates a secure full stack authentication system built with Node.js, Express, MongoDB, JWT, HTML, CSS, and JavaScript.
+        </p>
+        <div class="thankyou-user">
+          <span>Welcome, </span><strong id="thankyou-user-name">User</strong>
+        </div>
+        <div class="thankyou-actions">
+          <button id="back-to-login-btn" class="btn-outline">Back to Login</button>
+          <a href="https://vajeedshaikh82-ux.github.io/vajeed-portfolio/" target="_blank" class="btn-primary">View Portfolio</a>
+        </div>
       </div>
-      <div class="nav-user">
-        <span id="user-name">User</span>
-        <button id="logout-btn" class="btn-outline">Logout</button>
-      </div>
-    </nav>
-
-    <main class="dashboard-main">
-      <div class="dashboard-hero glass-card">
-        <div class="user-avatar">&#128081;</div>
-        <h1>Welcome, <span id="dashboard-user-name">User</span>!</h1>
-        <p>You have successfully logged in to your premium dashboard.</p>
-      </div>
-
-      <div class="dashboard-grid">
-        <div class="dashboard-card glass-card">
-          <div class="card-icon">&#128100;</div>
-          <h3>Profile</h3>
-          <p>Manage your personal information and preferences</p>
-        </div>
-        <div class="dashboard-card glass-card">
-          <div class="card-icon">&#128274;</div>
-          <h3>Security</h3>
-          <p>Update password and enable two-factor authentication</p>
-        </div>
-        <div class="dashboard-card glass-card">
-          <div class="card-icon">&#128200;</div>
-          <h3>Activity</h3>
-          <p>View your recent login history and account activity</p>
-        </div>
-        <div class="dashboard-card glass-card">
-          <div class="card-icon">&#9881;</div>
-          <h3>Settings</h3>
-          <p>Configure notifications and application preferences</p>
-        </div>
-    </main>
+    </div>
   </div>
 
   <script src="script.js"></script>

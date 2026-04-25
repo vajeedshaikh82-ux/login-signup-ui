@@ -2,17 +2,17 @@
 // FRONTEND LOGIC - LOGIN SIGNUP UI
 // ============================================
 
-const API_BASE_URL = 'https://login-signup-ui.onrender.com/api';
+const API_BASE_URL = 'http://localhost:5000/api';
 
 // DOM Elements
 const authContainer = document.getElementById('auth-container');
-const dashboardContainer = document.getElementById('dashboard-container');
+const thankyouContainer = document.getElementById('thankyou-container');
 const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
 const tabBtns = document.querySelectorAll('.tab-btn');
 const authTabs = document.querySelector('.auth-tabs');
 const toastContainer = document.getElementById('toast-container');
-const logoutBtn = document.getElementById('logout-btn');
+const backToLoginBtn = document.getElementById('back-to-login-btn');
 
 // ============================================
 // UTILITY FUNCTIONS
@@ -152,7 +152,7 @@ signupForm.addEventListener('submit', async (e) => {
     localStorage.setItem('user', JSON.stringify(data.user));
     showToast('Account created successfully!', 'success');
     signupForm.reset();
-    setTimeout(() => showDashboard(data.user), 1000);
+    setTimeout(() => showThankYou(data.user), 1000);
   } catch (err) {
     showToast(err.message, 'error');
   } finally {
@@ -181,7 +181,7 @@ loginForm.addEventListener('submit', async (e) => {
     localStorage.setItem('user', JSON.stringify(data.user));
     showToast('Login successful!', 'success');
     loginForm.reset();
-    setTimeout(() => showDashboard(data.user), 1000);
+    setTimeout(() => showThankYou(data.user), 1000);
   } catch (err) {
     showToast(err.message, 'error');
   } finally {
@@ -190,24 +190,23 @@ loginForm.addEventListener('submit', async (e) => {
 });
 
 // ============================================
-// DASHBOARD & NAVIGATION
+// THANK YOU PAGE & NAVIGATION
 // ============================================
 
-function showDashboard(user) {
+function showThankYou(user) {
   authContainer.classList.remove('active');
-  dashboardContainer.classList.add('active');
-  document.getElementById('user-name').textContent = user.name;
-  document.getElementById('dashboard-user-name').textContent = user.name;
-  document.title = 'Dashboard - Royal Access';
+  thankyouContainer.classList.add('active');
+  document.getElementById('thankyou-user-name').textContent = user.name;
+  document.title = 'Welcome - Royal Access';
 }
 
 function showAuth() {
-  dashboardContainer.classList.remove('active');
+  thankyouContainer.classList.remove('active');
   authContainer.classList.add('active');
   document.title = 'Login Signup - Premium Auth';
 }
 
-logoutBtn.addEventListener('click', () => {
+backToLoginBtn.addEventListener('click', () => {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
   showToast('Logged out successfully', 'success');
@@ -223,7 +222,7 @@ async function init() {
   if (token) {
     const user = await getCurrentUser();
     if (user) {
-      showDashboard(user);
+      showThankYou(user);
     } else {
       showAuth();
     }
@@ -233,3 +232,4 @@ async function init() {
 }
 
 init();
+
