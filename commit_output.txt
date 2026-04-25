@@ -1,0 +1,4 @@
+error: pathspec 'Add' did not match any file(s) known to git
+error: pathspec 'all' did not match any file(s) known to git
+error: pathspec 'project' did not match any file(s) known to git
+error: pathspec 'files\ ' did not match any file(s) known to git

@@ -1,0 +1,13 @@
+From https://github.com/vajeedshaikh82-ux/login-signup-ui
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+error: The following untracked working tree files would be overwritten by merge:
+	.env.example
+	README.md
+	TODO.md
+	index.html
+	package.json
+	server.js
+Please move or remove them before you merge.
+Aborting
+Merge with strategy ort failed.
