@@ -2,7 +2,7 @@
 // FRONTEND LOGIC - LOGIN SIGNUP UI
 // ============================================
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://login-signup-ui.onrender.com/api';
 
 // DOM Elements
 const authContainer = document.getElementById('auth-container');
